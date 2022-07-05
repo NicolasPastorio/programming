@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+//4.5-Operador-?-pag78
+int main(){
+	system("COLOR 02");
+	setlocale(LC_ALL,"Portuguese");
+	/*Apesar de limitado, o operador "?" não é
+	  restrito a atribuições apenas.*/
+	int num;
+	
+	printf("Digite um número: ");
+	scanf("%d", &num);
+	
+	(num == 10) ? printf("O número é igual a 10.\n")
+				 :printf("O número é diferente de 10.\n");
+		
+	system("PAUSE");
+	return 0;
+}

@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+//4.6-scopo-no-case-pag-82
+int main(){
+	system("COLOR 02");
+	setlocale(LC_ALL,"Portuguese");
+	//---------
+	char ch;
+	int a, b;
+	//---------
+	printf("Digite uma operação matemática: ");
+	ch = getchar();
+	printf("Digite dois números inteiros: ");
+	scanf("%d%d", &a, &b);
+	
+	switch( ch ){
+		//---------------------------------
+		case '+':{
+			int c = a + b;
+			printf("Soma: %d.\n", c);
+		}
+			break;
+		//---------------------------------
+		case '-':{
+			int d = a - b;
+			printf("Sbtração: %d.\n", d);
+		}
+			break;
+		//---------------------------------
+		case '*':{
+			int e = a * b;
+			printf("Produto: %d.\n", e);
+		}
+			break;
+		//---------------------------------
+		case '/':{
+			int f = a / b;
+			printf("Divisão: %d", f);
+		}
+			break;
+		//---------------------------------
+		default : printf("Não é uma operação.\n");
+	}
+	
+	system("PAUSE");
+	return 0;
+}

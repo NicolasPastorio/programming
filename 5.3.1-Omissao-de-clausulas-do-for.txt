@@ -1,0 +1,57 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+//5.3.1-Omissao-de-clausulas-do-for
+int main(){
+	system("COLOR 02");
+	setlocale(LC_ALL,"Portuguese");
+	/*no comando for temos três clausulas:
+	  inicialização, condição e incremento.
+	  
+	  for (inicialização; condição; incremento){
+	  	sequência de comandos;
+	  }
+	  */
+	//Omissão de inicializalção
+	int a, b, c;
+	printf("digite o valor de a: ");
+	scanf("%d", &a);
+	printf("digite o valor de b: ");
+	scanf("%d", &b);
+	
+	for(/*inicialização*/; a <= b; a++){
+		printf("%d\n", a);
+	}
+	
+	//Omissão de condição
+	/*Para o comando for, a ausência da clausula 
+	  de condição é conciderada como uma condição 
+	  que é sempre verdadeira. E a ausência da
+	  condição gera um ciclo infinito. */
+	/*
+	
+	printf("digite o valor de a: ");
+	scanf("%d", &a);
+	printf("digite o valor de b: ");
+	scanf("%d", &b);
+	
+	for(c = a;   ; c++){
+		printf("%d\n", a);
+	}*/
+	
+	//Omissão deo incremento
+	/*a omição do incremento também
+	  gera um ciclo infinito.*/
+	printf("digite o valor de a: ");
+	scanf("%d", &a);
+	printf("digite o valor de b: ");
+	scanf("%d", &b);
+	
+	for (c= a; c <= b; /*incremento*/){
+		printf("%d \n", c);
+		c++;
+	}
+	
+	system("PAUSE");
+	return 0;
+}

@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+//5.7-Comando-continue
+/*O comando continue serve para intterromper um
+laço de repetição e funciona somente e laços*/
+int main(){
+	system("COLOR 02");
+	setlocale(LC_ALL,"Portuguese");
+	
+	int opcao = 0;
+	while (opcao != 5) {
+		printf("Escolha uma opção entre 1 e 5: ");
+		scanf("%d", &opcao);
+		
+		if((opcao > 5) || (opcao < 1))
+			continue;
+		printf("Opção escolhida: %d \n", opcao);
+	}
+	
+	system("PAUSE");
+	return 0;
+}

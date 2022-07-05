@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+//4.5-Operador-?-pag78
+int main(){
+	system("COLOR 02");
+	setlocale(LC_ALL,"Portuguese");
+//usando if - else
+	int x, y, z;
+	
+	printf("Digite x: ");
+	scanf("%d", &x);
+	printf("Digite y: ");
+	scanf("%d", &y);
+	//------------------------
+	if(x > y)
+		z = x;
+	else
+		z = y;
+	//------------------------
+	printf("Maior = %d\n", z);
+	
+//usando o operador ternário "?"
+	
+	printf("Digite x: ");
+	scanf("%d", &x);
+	printf("Digite y: ");
+	scanf("%d", &y);
+	//------------------------
+	z = x > y ? x : y;
+	//------------------------
+	printf("Maior = %d\n", z);
+	
+	system("PAUSE");
+	return 0;
+}

@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+//4.6-switch-sem-break
+int main(){
+	system("COLOR 02");
+	setlocale(LC_ALL,"Portuguese");
+	
+	char ch;
+	printf("Digite um sínbolo de pontuação: ");
+	ch = getchar();
+	
+	switch(ch){
+		case '.': printf("Ponto.\n");
+		case ',': printf("Vírgula.\n");
+		case ':': printf("Dois pontos.\n");
+		case ';': printf("Ponto e vírgula.\n");
+		default : printf("Não é uma pontuação.\n");
+	}
+	
+	system("PAUSE");
+	return 0;
+}

@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+//5.3-Comando-for
+int main(){
+	system("COLOR 02");
+	setlocale(LC_ALL,"Portuguese");
+
+	int a, b, c;
+	
+	printf("Digite o valor de a: ");
+	scanf("%d", &a);
+	printf("Digite o valor de b: ");
+	scanf("%d", &b);
+	
+	for(c = a; c <= b; c++){
+		printf("%d \n", c);
+	}
+	
+	
+	
+	system("PAUSE");
+	return 0;
+}

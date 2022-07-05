@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+//5.3-for-vs-while
+int main(){
+	system("COLOR 02");
+	setlocale(LC_ALL,"Portuguese");
+
+	//for----------------------------
+	int i, soma = 0;
+	for (i = 1; i <= 10; i++){
+		soma = soma + i;
+	}
+	printf("(for)Soma = %d \n", soma);
+	//for----------------------------
+	
+	//while----------------------------
+	soma = 0;
+	i = 1;
+	while (i <= 10){
+		soma = soma + i;
+		i++;
+	}
+	printf("(while)Soma = %d \n", soma);
+	//while----------------------------
+	
+	
+	system("PAUSE");
+	return 0;
+}

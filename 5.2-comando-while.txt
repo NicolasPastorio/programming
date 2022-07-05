@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+//5.2-comando-while
+int main(){
+	system("COLOR 02");
+	setlocale(LC_ALL,"Portuguese");
+
+	int a, b;
+	printf("Digite o valor de a: ");
+	scanf("%d", &a);
+	printf("Digite o valor de b: ");
+	scanf("%d", &b);
+	
+	while(a < b){
+		a = a + 1;
+		printf("%d\n", a);
+	}
+		
+	system("PAUSE");
+	return 0;
+}

@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+//5.4-do-while-ponto-e-virgula
+int main(){
+	system("COLOR 02");
+	setlocale(LC_ALL,"Portuguese");
+	
+	int i = 0;
+	
+	do {
+		printf("Valor %d;\n", i);
+		i++;
+	} while (i < 10);//esse ponto e vírgula e nexessário!
+	
+	system("PAUSE");
+	return 0;
+}

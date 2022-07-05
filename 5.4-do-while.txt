@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+//5.4-do-while
+int main(){
+	system("COLOR 02");
+	setlocale(LC_ALL,"Portuguese");
+	/* Forma geral do do-while
+	  do {
+		sequencia de comandos;
+	  }while(condição);
+	*/
+	/*a sequência de comandos é executada
+	  pelo menos uma vez*/
+	
+	int i;
+	
+	do {
+		printf("Escolha uma opção: \n"
+			   "(1) Opção 1\n"
+			   "(2) Opção 2\n"
+			   "(3) Opção 3\n");
+		scanf("%d", &i);
+	
+	} while ((i < 1) || (i > 3));//esse ponto e vírgula é necessário
+		printf("Você escolheu a oplção %d", i);
+	
+	
+	system("PAUSE");
+	return 0;
+}

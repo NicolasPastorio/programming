@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+//4.6-scopo-no-case-pag-81
+int main(){
+	system("COLOR 02");
+	setlocale(LC_ALL,"Portuguese");
+	
+	char ch;
+	printf("Digite um símbolo de pontuação: ");
+	ch = getchar();
+	
+	switch(ch){
+	/*ao declarar uma variável dentr de um case
+	  se faz obrigatório o uso de chaves "{}"*/
+		case '.': {
+		int hc = 2; 
+		printf("Ponto.\n");
+		printf("hc = %d.\n", hc);
+			break;
+		}
+		case ',': printf("Vírgula.\n");
+		case ':': printf("Dois pontos.\n");
+		case ';': printf("Ponto e vírgula.\n");
+		default : printf("Não é uma pontuação.\n");
+	}
+	
+	system("PAUSE");
+	return 0;
+}

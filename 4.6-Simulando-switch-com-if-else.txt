@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+//4.6-Simulando-switch-com-if-else
+int main(){
+	system("COLOR 02");
+	setlocale(LC_ALL,"Portuguese");
+	
+	char ch;
+	
+	printf("Digite um símbolo de potuação: ");
+	ch = getchar();//scanf("%c", &ch);
+	
+	if(ch == '.')
+		printf("Ponto.\n");
+	else
+		if(ch == ',')
+			printf("Vírgula.\n");
+		else
+			if(ch == ':')
+				printf("Dois pontos.\n");
+			else
+				if(ch == ';')
+					printf("Ponto e vírgula.\n");
+				else
+					printf("Não é uma pontuação.\n");	
+
+	system("PAUSE");
+	return 0;
+}
